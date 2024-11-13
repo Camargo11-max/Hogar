@@ -1,0 +1,68 @@
+.card-primero:before
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: block;
+    position: absolute;
+    opacity: 0.4;
+}
+
+.card-img { 
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.card-img-overlay {
+    justify-content: center;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.reconocimiento-dos{
+    background: #000;
+}
+
+.img-five{
+    width: 35%;
+}
+
+.btn{
+    width: 75%;
+}
+
+.btn-minimo{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.container-header{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.container-cards{
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;    
+} 
+
+.container-compra{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.container-finca{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
