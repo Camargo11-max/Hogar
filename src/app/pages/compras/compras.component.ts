@@ -10,6 +10,8 @@ import { CardsComponent } from '../cards/cards.component';
   templateUrl: './compras.component.html',
   styleUrl: './compras.component.scss'
 })
+
 export class ComprasComponent {
+
 
 }

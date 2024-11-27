@@ -1,4 +1,4 @@
-<section  class="pb-4 py-4 ">
+<!--<section  class="pb-4 py-4" id="compras">
     <div class="container text-center">
       <div class="row">
         <div class="col">
@@ -13,7 +13,7 @@
         </div>
    
 
-    <section  id="produt">
+    <section  id="product">
       <div class="container container-fluid">
       <div class="row">
         <div class="row">
@@ -34,7 +34,7 @@
               <div class="card-body">
                 <h3 class="card-title">Cocina</h3>
                 <h4>4-8<span class="text-warning"> Semanas</span></h4>
-                <p> <i class="bi bi-cash-coin"></i> Desde: 16'380.4150 millones</p>
+                <p> <i class="bi bi-cash-coin"></i> Desde: 16'380.415 millones</p>
                 <button onclick="agregarProducto('Cocina')" class="btn btn-outline-warning">Agregar carrito</button>
               </div>
             </div>
@@ -86,6 +86,53 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+
+    <section  class="pb-4 py-4" id="compras">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 24rem;">
+              <div  id="summary-shop"  class="card-body border border-danger">
+                <h4 class="card-title"><i class="bi bi-shop"></i> Tienda </h4>
+                <button onclick="toggleListado()" class="btn btn-outline-danger">Ver listado del Carrito</button>
+               <span id="count-cart"> {{countCart}} </span> productos
+                <div id="listadoCart"></div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+    </section>
+
+    <section  id="product">
+      <div class="container container-fluid">
+      <div class="row">
+        <div *ngFor="let e of informacionservicio" class="col-sm-12 col-lg-4 col-md-4 py-3">
+          <div class="card border-danger-subtle border-2" style="width: 18rem;">
+            <img src={{e.imagen}} class="card-img-top " alt="...">
+            <div class="card-body">
+              <h3 class="card-title">{{e.titulo }}</h3>
+              <h4>{{e.semanas}}<span class="text-danger"> Semanas</span></h4>
+              <p> <i class="bi bi-cash-coin"></i> Desde: {{e.precio}}</p>
+              <button (click)="agregarProducto(e.titulo)" class=" btn btn-outline-danger">{{e.texto}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!--<ul>  
+      <li *ngFor="let e of informacionservicio">    
+        <h3>Titulo: {{e.titulo}}</h3>   
+        <h4>Semanas: {{e.semanas}} </h4>    
+        <p>Precio: {{e.precio}}</p>  
+        <button>Boton: {{e.texto}} </button> </li>
+      </ul> -->
+
+
+
 
 

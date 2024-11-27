@@ -9,6 +9,10 @@ import { FormularioComponent } from '../formulario/formulario.component';
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.scss'
 })
+
 export class ContactoComponent {
+
+
+
 
 }
