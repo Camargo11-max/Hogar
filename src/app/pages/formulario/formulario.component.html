@@ -13,8 +13,48 @@
 
         <div class="col container-fluid p-3 border border-primary border-3">
           <h2 class="text-center p-2">¡ REGISTRATE !</h2>
+
+         <form  class="formulario" [formGroup]="contactoForm" (ngSubmit)="enviarformulario()">
+
+          <label  class="formulario__label" for="nombre">Nombres: </label>
+          <input  class="formulario__input" id="nombre" type="text" formControlName="nombre"/>
+
+          <label class="formulario__label" for="apellido">Apellidos: </label>
+          <input class="formulario__input" id="apellido" type="text" formControlName="apellido"/>
+
+          <label class="formulario__label" for="correo">Correo: </label>
+          <input class="formulario__input" id="correo" type="text" formControlName="correo"/>
+
+          <label class="formulario__label" for="tel">Telefono: </label>
+          <input class="formulario__input" id="tel" type="tel" formControlName="telefono"/>
+
+          <label class="formulario__label" for="codigo">Codigo Postal: </label>
+          <input class="formulario__input" id="codigo" type="text" formControlName="codigo"/>
+
+          <label class="formulario__label" for="ciudad">Ciudad: </label>
+          <input class="formulario__input" id="ciudad" type="text" formControlName="ciudad"/>
+
+          <label class="formulario__label" for="municipio">Municipio: </label>
+          <input class="formulario__input" id="municipio" type="text" formControlName="municipio"/>
+
+          <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+              <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+              Acepto los Terminos y Condiciones
+            </label>
+          </div>
+        
+          <button class="btn btn-outline-primary" type="submit" [disabled]="!contactoForm.valid"> Enviar </button>
+         </form>
+
+           
+
+
+
+
+
           
-          <form action="" class="formulario" id="formulario">
+          <!--<form action="" class="formulario" id="formulario">
             <div class="formulario__grupo" id="grupo__nombre">
               <label for="nombre" class="formulario__label">Nombres</label>
               <div class="formulario__grupo-input">
@@ -99,7 +139,7 @@
             <div class="formulario__grupo formulario__grupo-btn-enviar">
               <button type="submit" class="btn btn-outline-primary">Enviar</button>
             </div>
-          </form>
+          </form> -->
                 
 
 

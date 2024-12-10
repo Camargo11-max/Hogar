@@ -5,7 +5,7 @@ import { CardsPortafolioComponent } from "../cards-portafolio/cards-portafolio.c
 @Component({
   selector: 'app-portafolio',
   standalone: true,
-  imports: [HeaderComponent, CardsPortafolioComponent, CardsPortafolioComponent],
+  imports: [HeaderComponent, CardsPortafolioComponent],
   templateUrl: './portafolio.component.html',
   styleUrl: './portafolio.component.scss'
 })

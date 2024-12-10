@@ -96,15 +96,19 @@
             <div class="card" style="width: 24rem;">
               <div  id="summary-shop"  class="card-body border border-danger">
                 <h4 class="card-title"><i class="bi bi-shop"></i> Tienda </h4>
-                <button onclick="toggleListado()" class="btn btn-outline-danger">Ver listado del Carrito</button>
+                <button (click)="toggleListado()" class="btn btn-outline-danger">Ver listado del Carrito</button>
                <span id="count-cart"> {{countCart}} </span> productos
-                <div id="listadoCart"></div>
+                <div id="listadoCart" [className]="isOn ? 'desplegado' : '' "></div>
+              <div *ngFor="let item of listadoCarrito">
+                <span>{{item.cantidad}} {{item.id}}</span>              
+              </div>
               </div>
             </div>
           </div>
           </div>
           </div>
     </section>
+
 
     <section  id="product">
       <div class="container container-fluid">
@@ -116,7 +120,7 @@
               <h3 class="card-title">{{e.titulo }}</h3>
               <h4>{{e.semanas}}<span class="text-danger"> Semanas</span></h4>
               <p> <i class="bi bi-cash-coin"></i> Desde: {{e.precio}}</p>
-              <button (click)="agregarProducto(e.titulo)" class=" btn btn-outline-danger">{{e.texto}}</button>
+              <button (click)="agregarAlCarrito(e.titulo)" class=" btn btn-outline-danger">{{e.texto}}</button>
             </div>
           </div>
         </div>
